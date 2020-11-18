@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>563787477939-kspng471pnj9m1bbudv3kot6l3t6euot.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.563787477939-kspng471pnj9m1bbudv3kot6l3t6euot</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBr2RcMjTFaCbD00FPdQqDsqEELxmd1USk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>563787477939</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.talspektor.Instegram-Clone</string>
+	<key>PROJECT_ID</key>
+	<string>instegram-509f6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>instegram-509f6.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:563787477939:ios:d19f309f25061dff3491c6</string>
+	<key>DATABASE_URL</key>
+	<string>https://instegram-509f6.firebaseio.com</string>
+</dict>
+</plist>
