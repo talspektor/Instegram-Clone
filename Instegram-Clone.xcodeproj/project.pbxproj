@@ -35,6 +35,10 @@
 		3682C7D22565057000195FD6 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3682C7D12565057000195FD6 /* AuthManager.swift */; };
 		3682C7D4256505AB00195FD6 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3682C7D3256505AB00195FD6 /* StorageManager.swift */; };
 		3682C7D625650E1B00195FD6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3682C7D525650E1B00195FD6 /* Extensions.swift */; };
+		36A76092256BCB270087FC6C /* IGFeedPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A76091256BCB270087FC6C /* IGFeedPostTableViewCell.swift */; };
+		36A76095256BCC890087FC6C /* IGFeedPostHederTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A76094256BCC890087FC6C /* IGFeedPostHederTableViewCell.swift */; };
+		36A76097256BCC9C0087FC6C /* IGFeedPostActionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A76096256BCC9C0087FC6C /* IGFeedPostActionsTableViewCell.swift */; };
+		36A76099256BCCB70087FC6C /* IGFeedPostGeneralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A76098256BCCB70087FC6C /* IGFeedPostGeneralTableViewCell.swift */; };
 		920D6646360D5447A8AA967C /* Pods_Instegram_CloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5843E02961FFFEFB351D6B6 /* Pods_Instegram_CloneTests.framework */; };
 		C16B8ADB809A80B5A21CA23D /* Pods_Instegram_Clone_Instegram_CloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19005B544CB708F6879DE04 /* Pods_Instegram_Clone_Instegram_CloneUITests.framework */; };
 		D18B8AAB4A56C2C062CDEA56 /* Pods_Instegram_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71723FF79826D4EDEE51461 /* Pods_Instegram_Clone.framework */; };
@@ -93,6 +97,10 @@
 		3682C7D12565057000195FD6 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		3682C7D3256505AB00195FD6 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		3682C7D525650E1B00195FD6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		36A76091256BCB270087FC6C /* IGFeedPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostTableViewCell.swift; sourceTree = "<group>"; };
+		36A76094256BCC890087FC6C /* IGFeedPostHederTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostHederTableViewCell.swift; sourceTree = "<group>"; };
+		36A76096256BCC9C0087FC6C /* IGFeedPostActionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostActionsTableViewCell.swift; sourceTree = "<group>"; };
+		36A76098256BCCB70087FC6C /* IGFeedPostGeneralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostGeneralTableViewCell.swift; sourceTree = "<group>"; };
 		87850CC549768B235E30BC65 /* Pods-Instegram-CloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instegram-CloneTests.debug.xcconfig"; path = "Target Support Files/Pods-Instegram-CloneTests/Pods-Instegram-CloneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A19005B544CB708F6879DE04 /* Pods_Instegram_Clone_Instegram_CloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instegram_Clone_Instegram_CloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A71723FF79826D4EDEE51461 /* Pods_Instegram_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instegram_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +204,7 @@
 		3682C7A92564E98400195FD6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				36A76090256BCAEF0087FC6C /* Cells */,
 				3682C7AC2564E9D200195FD6 /* Storyboards */,
 				3682C7812564E8F300195FD6 /* Assets.xcassets */,
 			);
@@ -275,6 +284,25 @@
 				3682C7CA2564EBE500195FD6 /* PublishPostViewController.swift */,
 			);
 			path = General;
+			sourceTree = "<group>";
+		};
+		36A76090256BCAEF0087FC6C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				36A76093256BCC5D0087FC6C /* HomeFeed */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		36A76093256BCC5D0087FC6C /* HomeFeed */ = {
+			isa = PBXGroup;
+			children = (
+				36A76091256BCB270087FC6C /* IGFeedPostTableViewCell.swift */,
+				36A76094256BCC890087FC6C /* IGFeedPostHederTableViewCell.swift */,
+				36A76096256BCC9C0087FC6C /* IGFeedPostActionsTableViewCell.swift */,
+				36A76098256BCCB70087FC6C /* IGFeedPostGeneralTableViewCell.swift */,
+			);
+			path = HomeFeed;
 			sourceTree = "<group>";
 		};
 		5C9B2AC804BF55D893236725 /* Pods */ = {
@@ -542,12 +570,15 @@
 			files = (
 				3682C7C52564EB9400195FD6 /* SearchViewController.swift in Sources */,
 				3682C7B92564EB0C00195FD6 /* LoginViewController.swift in Sources */,
+				36A76095256BCC890087FC6C /* IGFeedPostHederTableViewCell.swift in Sources */,
 				3682C77A2564E8F100195FD6 /* HomeViewController.swift in Sources */,
 				3682C7D4256505AB00195FD6 /* StorageManager.swift in Sources */,
 				3682C7762564E8F100195FD6 /* AppDelegate.swift in Sources */,
 				3682C7C92564EBCF00195FD6 /* PostEditorViewController.swift in Sources */,
 				3682C7802564E8F100195FD6 /* Instegram_Clone.xcdatamodeld in Sources */,
+				36A76099256BCCB70087FC6C /* IGFeedPostGeneralTableViewCell.swift in Sources */,
 				3682C7BB2564EB2400195FD6 /* RegistrationViewController.swift in Sources */,
+				36A76092256BCB270087FC6C /* IGFeedPostTableViewCell.swift in Sources */,
 				3682C7B22564EA8E00195FD6 /* NotificationViewController.swift in Sources */,
 				3682C7D625650E1B00195FD6 /* Extensions.swift in Sources */,
 				3682C7C32564EB8200195FD6 /* ListViewController.swift in Sources */,
@@ -560,6 +591,7 @@
 				3682C7D02565043E00195FD6 /* DatabaseManager.swift in Sources */,
 				3682C7C12564EB7000195FD6 /* SettingsViewController.swift in Sources */,
 				3682C7B02564EA7800195FD6 /* CameraViewController.swift in Sources */,
+				36A76097256BCC9C0087FC6C /* IGFeedPostActionsTableViewCell.swift in Sources */,
 				3682C7C72564EBA300195FD6 /* SearchResultViewController.swift in Sources */,
 				3682C7BD2564EB3C00195FD6 /* PostViewController.swift in Sources */,
 			);
