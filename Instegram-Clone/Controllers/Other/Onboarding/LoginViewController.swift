@@ -205,16 +205,21 @@ class LoginViewController: UIViewController {
             // username
             username = usernameEmail
         }
-        AuthManager.shared.loginUser(userName: username,
-                                     email: email,
-                                     password: password) { (success) -> (Void) in
-                                        if success {
-                                            // user loggedin
-                                            dismiss(animated: true, completion: nil)
-                                        } else {
-                                            // error aoccured
-                                            let alert = UIAlertController(title: "Login error", message: "we were ", preferredStyle: <#T##UIAlertController.Style#>)
-                                        }
+        AuthManager.shared.loginUser(userName: username, email: email, password: password) { success in
+            DispatchQueue.main.async {
+                if success {
+                    // user loggedin
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    // error aoccured
+                    let alert = UIAlertController(title: "Log In Error",
+                                                  message: "we were unable to log you in",
+                                                  preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss",
+                                                  style: .cancel))
+                    self.present(alert, animated: true)
+                }
+            }
         }
     }
     
@@ -232,7 +237,8 @@ class LoginViewController: UIViewController {
     
     @objc private func didTapCreateAccountButton() {
         let vc = RegistrationViewController()
-        present(vc, animated: true)
+        vc.title = "Create Account"
+        present(UINavigationController(rootViewController: vc), animated: true)
     }
  }
 

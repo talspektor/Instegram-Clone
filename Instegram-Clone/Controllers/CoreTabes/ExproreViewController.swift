@@ -10,21 +10,36 @@ import UIKit
 
 class ExproreViewController: UIViewController {
 
+    private let searchBar: UISearchBar = {
+        let searchBare = UISearchBar()
+        searchBare.backgroundColor = .secondarySystemBackground
+        return searchBare
+    }()
+    
+    private var collectioView: UICollectionView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.topItem?.titleView = searchBar
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        collectioView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectioView?.delegate = self
+        collectioView?.dataSource = self
+        guard let collectioView = collectioView else { return }
+        view.addSubview(collectioView)
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension ExproreViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
     }
-    */
-
 }
