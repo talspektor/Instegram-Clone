@@ -41,8 +41,9 @@
 		36A76099256BCCB70087FC6C /* IGFeedPostGeneralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A76098256BCCB70087FC6C /* IGFeedPostGeneralTableViewCell.swift */; };
 		36A7609B256CD7150087FC6C /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A7609A256CD7150087FC6C /* FormTableViewCell.swift */; };
 		36A7609E256CE72E0087FC6C /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A7609D256CE72E0087FC6C /* PhotoCollectionViewCell.swift */; };
-		36A760A0256CE78E0087FC6C /* ProphileIndoCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A7609F256CE78E0087FC6C /* ProphileIndoCollectionReusableView.swift */; };
+		36A760A0256CE78E0087FC6C /* ProfileInfoCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A7609F256CE78E0087FC6C /* ProfileInfoCollectionReusableView.swift */; };
 		36A760A2256CE7C30087FC6C /* ProfileTabsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A760A1256CE7C30087FC6C /* ProfileTabsCollectionReusableView.swift */; };
+		36A760A4256E412F0087FC6C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A760A3256E412F0087FC6C /* Models.swift */; };
 		920D6646360D5447A8AA967C /* Pods_Instegram_CloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5843E02961FFFEFB351D6B6 /* Pods_Instegram_CloneTests.framework */; };
 		C16B8ADB809A80B5A21CA23D /* Pods_Instegram_Clone_Instegram_CloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19005B544CB708F6879DE04 /* Pods_Instegram_Clone_Instegram_CloneUITests.framework */; };
 		D18B8AAB4A56C2C062CDEA56 /* Pods_Instegram_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71723FF79826D4EDEE51461 /* Pods_Instegram_Clone.framework */; };
@@ -107,8 +108,9 @@
 		36A76098256BCCB70087FC6C /* IGFeedPostGeneralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostGeneralTableViewCell.swift; sourceTree = "<group>"; };
 		36A7609A256CD7150087FC6C /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
 		36A7609D256CE72E0087FC6C /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
-		36A7609F256CE78E0087FC6C /* ProphileIndoCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProphileIndoCollectionReusableView.swift; sourceTree = "<group>"; };
+		36A7609F256CE78E0087FC6C /* ProfileInfoCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoCollectionReusableView.swift; sourceTree = "<group>"; };
 		36A760A1256CE7C30087FC6C /* ProfileTabsCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabsCollectionReusableView.swift; sourceTree = "<group>"; };
+		36A760A3256E412F0087FC6C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		87850CC549768B235E30BC65 /* Pods-Instegram-CloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instegram-CloneTests.debug.xcconfig"; path = "Target Support Files/Pods-Instegram-CloneTests/Pods-Instegram-CloneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A19005B544CB708F6879DE04 /* Pods_Instegram_Clone_Instegram_CloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instegram_Clone_Instegram_CloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A71723FF79826D4EDEE51461 /* Pods_Instegram_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instegram_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +225,7 @@
 		3682C7AA2564E99000195FD6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				36A760A3256E412F0087FC6C /* Models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -319,7 +322,7 @@
 		36A7609C256CE6EA0087FC6C /* CollectionViewHeaders */ = {
 			isa = PBXGroup;
 			children = (
-				36A7609F256CE78E0087FC6C /* ProphileIndoCollectionReusableView.swift */,
+				36A7609F256CE78E0087FC6C /* ProfileInfoCollectionReusableView.swift */,
 				36A760A1256CE7C30087FC6C /* ProfileTabsCollectionReusableView.swift */,
 			);
 			path = CollectionViewHeaders;
@@ -598,7 +601,7 @@
 				3682C7802564E8F100195FD6 /* Instegram_Clone.xcdatamodeld in Sources */,
 				36A76099256BCCB70087FC6C /* IGFeedPostGeneralTableViewCell.swift in Sources */,
 				3682C7BB2564EB2400195FD6 /* RegistrationViewController.swift in Sources */,
-				36A760A0256CE78E0087FC6C /* ProphileIndoCollectionReusableView.swift in Sources */,
+				36A760A0256CE78E0087FC6C /* ProfileInfoCollectionReusableView.swift in Sources */,
 				36A7609B256CD7150087FC6C /* FormTableViewCell.swift in Sources */,
 				36A76092256BCB270087FC6C /* IGFeedPostTableViewCell.swift in Sources */,
 				3682C7B22564EA8E00195FD6 /* NotificationViewController.swift in Sources */,
@@ -612,6 +615,7 @@
 				3682C7BF2564EB6200195FD6 /* EditProfileViewController.swift in Sources */,
 				3682C7B42564EA9800195FD6 /* ProfileViewController.swift in Sources */,
 				3682C7D02565043E00195FD6 /* DatabaseManager.swift in Sources */,
+				36A760A4256E412F0087FC6C /* Models.swift in Sources */,
 				3682C7C12564EB7000195FD6 /* SettingsViewController.swift in Sources */,
 				3682C7B02564EA7800195FD6 /* CameraViewController.swift in Sources */,
 				36A76097256BCC9C0087FC6C /* IGFeedPostActionsTableViewCell.swift in Sources */,
