@@ -45,6 +45,9 @@
 		36A760A2256CE7C30087FC6C /* ProfileTabsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A760A1256CE7C30087FC6C /* ProfileTabsCollectionReusableView.swift */; };
 		36A760A4256E412F0087FC6C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A760A3256E412F0087FC6C /* Models.swift */; };
 		36A760A6256F820B0087FC6C /* UserFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A760A5256F820B0087FC6C /* UserFollowTableViewCell.swift */; };
+		36A760A8256FA2AA0087FC6C /* NONOtificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A760A7256FA2AA0087FC6C /* NONOtificationsView.swift */; };
+		36BFFF18256FB3B9004E8510 /* NofificationFollowEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BFFF17256FB3B9004E8510 /* NofificationFollowEventTableViewCell.swift */; };
+		36BFFF1A256FB3D3004E8510 /* NotificationLikeEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BFFF19256FB3D3004E8510 /* NotificationLikeEventTableViewCell.swift */; };
 		920D6646360D5447A8AA967C /* Pods_Instegram_CloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5843E02961FFFEFB351D6B6 /* Pods_Instegram_CloneTests.framework */; };
 		C16B8ADB809A80B5A21CA23D /* Pods_Instegram_Clone_Instegram_CloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19005B544CB708F6879DE04 /* Pods_Instegram_Clone_Instegram_CloneUITests.framework */; };
 		D18B8AAB4A56C2C062CDEA56 /* Pods_Instegram_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71723FF79826D4EDEE51461 /* Pods_Instegram_Clone.framework */; };
@@ -113,6 +116,9 @@
 		36A760A1256CE7C30087FC6C /* ProfileTabsCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabsCollectionReusableView.swift; sourceTree = "<group>"; };
 		36A760A3256E412F0087FC6C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		36A760A5256F820B0087FC6C /* UserFollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowTableViewCell.swift; sourceTree = "<group>"; };
+		36A760A7256FA2AA0087FC6C /* NONOtificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NONOtificationsView.swift; sourceTree = "<group>"; };
+		36BFFF17256FB3B9004E8510 /* NofificationFollowEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NofificationFollowEventTableViewCell.swift; sourceTree = "<group>"; };
+		36BFFF19256FB3D3004E8510 /* NotificationLikeEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationLikeEventTableViewCell.swift; sourceTree = "<group>"; };
 		87850CC549768B235E30BC65 /* Pods-Instegram-CloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instegram-CloneTests.debug.xcconfig"; path = "Target Support Files/Pods-Instegram-CloneTests/Pods-Instegram-CloneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A19005B544CB708F6879DE04 /* Pods_Instegram_Clone_Instegram_CloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instegram_Clone_Instegram_CloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A71723FF79826D4EDEE51461 /* Pods_Instegram_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instegram_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,6 +226,7 @@
 				36A76090256BCAEF0087FC6C /* Cells */,
 				3682C7AC2564E9D200195FD6 /* Storyboards */,
 				3682C7812564E8F300195FD6 /* Assets.xcassets */,
+				36A760A7256FA2AA0087FC6C /* NONOtificationsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -303,6 +310,7 @@
 		36A76090256BCAEF0087FC6C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				36BFFF16256FB37B004E8510 /* Notifications */,
 				36A76093256BCC5D0087FC6C /* HomeFeed */,
 				36A7609A256CD7150087FC6C /* FormTableViewCell.swift */,
 				36A7609D256CE72E0087FC6C /* PhotoCollectionViewCell.swift */,
@@ -329,6 +337,15 @@
 				36A760A1256CE7C30087FC6C /* ProfileTabsCollectionReusableView.swift */,
 			);
 			path = CollectionViewHeaders;
+			sourceTree = "<group>";
+		};
+		36BFFF16256FB37B004E8510 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				36BFFF17256FB3B9004E8510 /* NofificationFollowEventTableViewCell.swift */,
+				36BFFF19256FB3D3004E8510 /* NotificationLikeEventTableViewCell.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		5C9B2AC804BF55D893236725 /* Pods */ = {
@@ -595,6 +612,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3682C7C52564EB9400195FD6 /* SearchViewController.swift in Sources */,
+				36A760A8256FA2AA0087FC6C /* NONOtificationsView.swift in Sources */,
 				3682C7B92564EB0C00195FD6 /* LoginViewController.swift in Sources */,
 				36A76095256BCC890087FC6C /* IGFeedPostHederTableViewCell.swift in Sources */,
 				3682C77A2564E8F100195FD6 /* HomeViewController.swift in Sources */,
@@ -607,10 +625,12 @@
 				36A760A0256CE78E0087FC6C /* ProfileInfoCollectionReusableView.swift in Sources */,
 				36A7609B256CD7150087FC6C /* FormTableViewCell.swift in Sources */,
 				36A76092256BCB270087FC6C /* IGFeedPostTableViewCell.swift in Sources */,
+				36BFFF1A256FB3D3004E8510 /* NotificationLikeEventTableViewCell.swift in Sources */,
 				36A760A6256F820B0087FC6C /* UserFollowTableViewCell.swift in Sources */,
 				3682C7B22564EA8E00195FD6 /* NotificationViewController.swift in Sources */,
 				3682C7D625650E1B00195FD6 /* Extensions.swift in Sources */,
 				3682C7C32564EB8200195FD6 /* ListViewController.swift in Sources */,
+				36BFFF18256FB3B9004E8510 /* NofificationFollowEventTableViewCell.swift in Sources */,
 				3682C7D22565057000195FD6 /* AuthManager.swift in Sources */,
 				3682C7782564E8F100195FD6 /* SceneDelegate.swift in Sources */,
 				3682C7CB2564EBE500195FD6 /* PublishPostViewController.swift in Sources */,
