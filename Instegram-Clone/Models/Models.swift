@@ -14,7 +14,9 @@ enum Gender {
 
 public struct User {
     let username: String
+    let bio: String
     let name: (first: String, last: String)
+    let profilPhoto: URL
     let bithdate: Date
     let gander: Gender
     let counts: UserCount
