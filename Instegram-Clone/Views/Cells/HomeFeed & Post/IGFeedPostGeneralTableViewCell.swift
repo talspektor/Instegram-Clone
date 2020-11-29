@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+/// Comments
 class IGFeedPostGeneralTableViewCell: UITableViewCell {
 
 }
