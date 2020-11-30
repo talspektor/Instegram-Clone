@@ -66,6 +66,14 @@ final class NotificationViewController: UIViewController, UITableViewDataSource,
     
     private func fetchNotifications() {
         for x in 0...100 {
+            let user = User(username: "Joe",
+                            bio: "",
+                            name: (first: "", last: ""),
+                            profilPhoto: URL(string: "https://www.google.com")!,
+                            bithdate: Date(),
+                            gander: .male,
+                            counts: UserCount(fallowers: 1, fallowing: 1, posts: 1),
+                            joinDate: Date())
             let post = UserPost(identifier: "",
                                 postType: .photo,
                                 thumbNailImage: URL(string: "https://www.google.com")!,
@@ -73,17 +81,11 @@ final class NotificationViewController: UIViewController, UITableViewDataSource,
                                 likeCout: [],
                                 comments: [],
                                 createdDate: Date(),
-                                taggedUser: [])
+                                taggedUser: [],
+                                owner: user)
             let model = UserNotification(type: x % 2 == 0 ? .like(post: post) : .follow(state: .not_following),
                                          test: "hallo world",
-                                         uset: User(username: "Joe",
-                                                    bio: "",
-                                                    name: (first: "", last: ""),
-                                                    profilPhoto: URL(string: "https://www.google.com")!,
-                                                    bithdate: Date(),
-                                                    gander: .male,
-                                                    counts: UserCount(fallowers: 1, fallowing: 1, posts: 1),
-                                                    joinDate: Date()))
+                                         uset: user)
             models.append(model)
         }
     }

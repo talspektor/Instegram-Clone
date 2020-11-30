@@ -44,6 +44,7 @@ public struct UserPost {
     let comments: [PostComment]
     let createdDate: Date
     let taggedUser: [String]
+    let owner: User
 }
 
 public struct PostLike {
@@ -61,5 +62,5 @@ public struct PostComment {
     let username: String
     let test: String
     let createdDate: Date
-    let likes: CommentLike
+    let likes: [CommentLike]
 }
