@@ -24,7 +24,7 @@ enum PostRenderType {
     case header(provider: User)
     case primaryContent(provider: UserPost) // post
     case actions(provider: String) // like, comment, share
-    case coments(comments: [PostComment])
+    case comments(comments: [PostComment])
 }
 
 /// Model od renderd posts
@@ -85,7 +85,7 @@ final class PostViewController: UIViewController {
                 )
             )
         }
-        renderdModels.append(PostRenderViewModel(renderType: .coments(comments: comments)))
+        renderdModels.append(PostRenderViewModel(renderType: .comments(comments: comments)))
     }
     
     override func viewDidLoad() {
@@ -111,7 +111,7 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch renderdModels[section].renderType {
         case .actions(_): return 1
-        case .coments(let comments): return comments.count > 4 ? 4 : comments.count
+        case .comments(let comments): return comments.count > 4 ? 4 : comments.count
         case .primaryContent(_): return 1
         case .header(_): return 1
         }
@@ -125,7 +125,7 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource {
                                                      for: indexPath) as! IGFeedPostActionsTableViewCell
             return cell
             
-        case .coments(let comments):
+        case .comments(let comments):
             let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostGeneralTableViewCell.identifier,
                                                      for: indexPath) as! IGFeedPostGeneralTableViewCell
             return cell
@@ -151,7 +151,7 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource {
         switch model.renderType {
         case .actions(_): return 60
             
-        case .coments(_): return 50
+        case .comments(_): return 50
             
         case .primaryContent(_): return tableView.width
             
