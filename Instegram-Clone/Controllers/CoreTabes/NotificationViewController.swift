@@ -76,7 +76,7 @@ final class NotificationViewController: UIViewController, UITableViewDataSource,
                             joinDate: Date())
             let post = UserPost(identifier: "",
                                 postType: .photo,
-                                thumbNailImage: URL(string: "https://www.google.com")!,
+                                postURL: URL(string: "https://www.google.com")!,
                                 caption: nil,
                                 likeCout: [],
                                 comments: [],

@@ -43,7 +43,7 @@ class HomeViewController: UIViewController {
     }
     
     private func createMockModels() {
-        let user = User(username: "Joe",
+        let user = User(username: "@kanye_west",
                         bio: "",
                         name: (first: "", last: ""),
                         profilPhoto: URL(string: "https://www.google.com")!,
@@ -53,7 +53,7 @@ class HomeViewController: UIViewController {
                         joinDate: Date())
         let post = UserPost(identifier: "",
                             postType: .photo,
-                            thumbNailImage: URL(string: "https://www.google.com")!,
+                            postURL: URL(string: "https://www.google.com")!,
                             caption: nil,
                             likeCout: [],
                             comments: [],
@@ -167,6 +167,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             case .header(let user):
                 let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostHederTableViewCell.identifier,
                                                          for: indexPath) as! IGFeedPostHederTableViewCell
+                cell.configure(with: user)
+                cell.delegate = self
                 return cell
             case .comments, .primaryContent, .actions: return UITableViewCell()
             }
@@ -177,6 +179,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             case .primaryContent(let post):
                 let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostTableViewCell.identifier,
                                                          for: indexPath) as! IGFeedPostTableViewCell
+                cell.configure(with: post)
                 return cell
             case .comments, .header, .actions: return UITableViewCell()
             }
@@ -187,6 +190,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             case .actions(let provider):
                 let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostActionsTableViewCell.identifier,
                                                          for: indexPath) as! IGFeedPostActionsTableViewCell
+                cell.delegate = self
                 return cell
             case .comments, .header, .primaryContent: return UITableViewCell()
             }
@@ -239,4 +243,31 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension HomeViewController: IGFeedPostHederTableViewCellDelegate {
+    func didTapMoreButton() {
+        let actionSheet = UIAlertController(title: "Post Options", message: nil, preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "Report Post", style: .destructive) { [weak self] _ in
+            self?.report()
+        })
+        present(actionSheet, animated: true)
+    }
+    
+    private func report() {
+        
+    }
+}
 
+extension HomeViewController: IGFeedPostActionsTableViewCellDelegate {
+    func didTapLikeButton() {
+        print("like")
+    }
+    
+    func didTapSendButton() {
+        print("send")
+    }
+    
+    func didTapCommentButton() {
+        print("comment")
+    }
+}

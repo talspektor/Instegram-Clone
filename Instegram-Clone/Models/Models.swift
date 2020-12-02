@@ -38,7 +38,7 @@ public enum UsetPostType: String {
 public struct UserPost {
     let identifier: String
     let postType: UsetPostType
-    let thumbNailImage: URL //either video url or full video
+    let postURL: URL //either video url or full video
     let caption: String?
     let likeCout: [PostLike]
     let comments: [PostComment]
